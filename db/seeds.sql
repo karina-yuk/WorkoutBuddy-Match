@@ -25,12 +25,12 @@
 
 -- ADDING CITY NAMES
    INSERT INTO CITY (NAME)
-    VALUES ('RICHMOND HILL'),
+    VALUES     ('TORONTO'),
+    ('RICHMOND HILL'),
     ('MARKHAM'),
     ('SCARBOROUGH'),
     ('BRAMPTON'),
     ('AJAX'),
-    ('TORONTO'),
     ('OAKVILLE'),
     ('MISSISSAUGA'),
     ('BURLINGTON'),
