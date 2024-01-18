@@ -5,9 +5,10 @@ USE workoutbuddy_db;
 CREATE TABLE USER (
   user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(15) NOT NULL,
-  buddy_name VARCHAR(45) NOT NULL,
+  full_name VARCHAR(45) NOT NULL,
   email VARCHAR(30) NOT NULL,
-  gender CHAR(1) CHECK(gender IN ('M', 'F', 'O', 'N'))
+  gender CHAR(1) CHECK(gender IN ('M', 'F', 'O', 'N')),
+  password VARCHAR(8) NOT NULL
 );
 
 CREATE TABLE WORKOUT (
@@ -22,7 +23,7 @@ CREATE TABLE GYM (
 
 CREATE TABLE CITY (
   city_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  city_name VARCHAR(30) NOT NULL
+  city_name VARCHAR(15) NOT NULL
     
 );
 
