@@ -12,6 +12,14 @@ Gym.init(
       autoIncrement: true,
       
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: User,
+        key: 'user_id',
+      },
+    },
     gym_name: {
       type: DataTypes.STRING,
       allowNull: false,
