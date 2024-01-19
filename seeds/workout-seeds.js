@@ -1,4 +1,4 @@
-const { Workout } = require("../models");
+const { Workout } = require("../Develop/models");
 
 const workoutData = [
   {
