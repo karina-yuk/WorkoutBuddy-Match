@@ -12,6 +12,7 @@ Workout.init(
       autoIncrement: true,
       
     },
+    
      workout_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -20,7 +21,14 @@ Workout.init(
         len: [1, 30],
       },
     },
-
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: User,
+        key: 'user_id',
+      },
+    },
   },
   {
     sequelize,
