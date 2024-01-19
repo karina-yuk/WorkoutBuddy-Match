@@ -31,3 +31,4 @@ Workout.init(
 );
 
 module.exports = Workout;
+

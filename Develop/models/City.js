@@ -1,5 +1,7 @@
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
+
 
 class City extends Model {}
 
@@ -28,3 +30,4 @@ City.init(
 );
 
 module.exports = City;
+
