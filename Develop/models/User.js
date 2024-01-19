@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
+const Gym = require('./Gym');
 
 class User extends Model {}
 
@@ -43,15 +44,29 @@ User.init(
         isIn: [['M', 'F', 'O', 'N']],
       },
     },
+    gym_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Gym,
+        key: 'gym_id',
+      },
+    },
+    workout_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Workout,
+        key: 'workout_id',
+      },
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [3, 8],
+        len: [3,8],
       },
     },
-  },
-  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
