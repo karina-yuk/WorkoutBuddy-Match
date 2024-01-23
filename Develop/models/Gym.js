@@ -33,6 +33,8 @@ Gym.init(
     sequelize,
     freezeTableName: true,
     modelName: 'gym',
+    TableName: 'GYM',
+
   }
 );
 
