@@ -4,22 +4,11 @@ const Gym = require("./Gym");
 const Workout = require("./Workout");
 const User = require("./User");
 const ProfilePic = require("./ProfilePic");
-const { } = require('sequelize');
 
-User.hasOne(City, { foreignKey: 'city_id' }); // USER has one CITYUser.hasOne(Gym); // USER has one GYM
-User.hasMany(Workout); // USER has many WORKOUT
-ProfilePic.belongsTo(User, {
-    foreignKey: {
-      name: 'userId', // Specify foreign key
-      allowNull: false,
-    },
-  });
-  Gym.hasMany(User, {
-    foreignKey: 'gym_id',
-    onDelete: 'CASCADE',
-  });
-  Workout.hasMany(User, {
-    foreignKey: 'gym_id',
-    onDelete: 'CASCADE',
-  });
+City.belongsTo(User);        // CITY belongs to USER
+User.hasOne(Workout);        // USER has one WORKOUT
+ProfilePic.belongsTo(User, { foreignKey: 'profile_pic_id' });     // PROFILEPIC belongs to USER
+User.belongsTo(Gym, { foreignKey: 'user_id' }); // USER belongs to GYM
+
+
 
