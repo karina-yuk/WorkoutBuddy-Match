@@ -41,3 +41,4 @@ THEN I am logged out and should see app main page.
 
 ---
 © 2024 Workout Buddy App
+© 2024 Workout Buddy App
