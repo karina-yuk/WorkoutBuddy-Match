@@ -37,6 +37,7 @@ ProfilePic.init(
     sequelize,
     freezeTableName: true,
     modelName: 'profilepic',
+    TableName: 'PROFILEPIC',
   }
 );
 
