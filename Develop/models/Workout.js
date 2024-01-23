@@ -35,6 +35,8 @@ Workout.init(
     timestamps: false,
     freezeTableName: true,
     modelName: 'workout',
+    TableName: 'WORKOUT',
+
   }
 );
 
