@@ -60,7 +60,7 @@ const signInFormHandler = async (event) => {
   
     if (gender && city && gym && workout) {
       // Send the captured values to the backend API endpoint
-      const response = await fetch('/api/users', {
+      const response = await fetch('/api/user', {
         method: 'POST',
         body: JSON.stringify({ gender, city, gym, workout }),
         headers: { 'Content-Type': 'application/json' },
