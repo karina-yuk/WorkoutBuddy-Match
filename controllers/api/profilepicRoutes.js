@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { City, User } = require('../../models');
+const { User, ProfilePic } = require('../../models');
 
-// The `/api/city` endpoint - GET all city
+// The `/api/profilepic` endpoint - GET all profilepic
 router.get('/', async (req, res) => {
     try {
-        const cityData = await City.findAll({
+        const profilepicData = await ProfilePic.findAll({
             include: [
                 {
                     model: User,
@@ -12,16 +12,16 @@ router.get('/', async (req, res) => {
                 },
             ],
         });
-        res.status(200).json(cityData);
+        res.status(200).json(profilepicData);
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-// The `/api/city/:id` endpoint - GET city by id
+// The `/api/profilepic/:id` endpoint - GET profilepic by id
 router.get('/:id', async (req, res) => {
     try {
-        const cityData = await City.findByPk(req.params.id, {
+        const profilepicData = await ProfilePic.findByPk(req.params.id, {
             include: [
                 {
                     model: User,
@@ -29,14 +29,13 @@ router.get('/:id', async (req, res) => {
                 },
             ],
         });
-        if (!cityData) {
-            res.status(404).json({ message: 'No city found with this id!' });
+        if (!profilepicData) {
+            res.status(404).json({ message: 'No profilepic found with this id!' });
             return;
         }
-        res.status(200).json(cityData);
+        res.status(200).json(profilepicData);
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
 module.exports = router;
