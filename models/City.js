@@ -26,6 +26,7 @@ City.init(
     sequelize,
     freezeTableName: true,
     modelName: 'city',
+    TableName: 'CITY'
   }
 );
 

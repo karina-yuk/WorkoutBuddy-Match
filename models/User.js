@@ -43,11 +43,27 @@ User.init(
         isIn: [['M', 'F', 'O', 'N']],
       },
     },
+    gym_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Gym,
+        key: 'gym_id',
+      },
+    },
+    workout_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Workout,
+        key: 'workout_id',
+      },
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [3,8],
       },
     },
   },
@@ -57,6 +73,7 @@ User.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
+    TableName: 'USER',
   }
 );
 
