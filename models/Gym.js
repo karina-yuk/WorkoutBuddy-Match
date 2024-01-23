@@ -5,7 +5,7 @@ class Gym extends Model {}
 
 Gym.init(
   {
-    gym_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
