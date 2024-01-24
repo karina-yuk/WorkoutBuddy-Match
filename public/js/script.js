@@ -187,7 +187,33 @@ const editGymHandler = async (event) => {
   }
 };
 
+// Function to handle delete account
+async function deleteAccountHandler() {
 
+  const confirmDeletion = confirm('Are you sure you want to delete your account?');
+
+  if (confirmDeletion) {
+    try {
+      // Send a DELETE request to the server
+      const response = await fetch('/api/delete-account', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.ok) {
+        // If deletion is successful, redirect the user to the home page.
+        document.location.replace('/'); 
+      } else {
+        // Handle errors, show an alert
+        alert('Unable to delete the account: ' + response.statusText);
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error('Error:', error);
+      alert('An unexpected error occurred while deleting the account.');
+    }
+  }
+}
 
 document
   .querySelector('.signin-form')
@@ -220,3 +246,5 @@ document
 document
   .querySelector(".gym-editsec")
   .addEventListener("submit", editGymHandler);
+
+document.getElementById('delete-account').addEventListener('click', deleteAccountHandler);
