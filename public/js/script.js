@@ -75,6 +75,29 @@ const userinfoFormHandler = async (event) => {
   }
 };
 
+// Function to handle edit username
+const editUsernameHandler = async (event) => {
+  event.preventDefault();
+
+  const usernameEdit = document.getElementById('user-edit').value;
+
+  if (usernameEdit) {
+    // Send the captured values to the backend API endpoint
+    const response = await fetch('/api/profile', {
+      method: 'PUT',
+      body: JSON.stringify({ usernameEdit }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      // TO DO: changed to displaying a message
+      // Maybe with "document.body.appendChild(`Successfully updated the username.`);"?
+      document.location.replace('/profile');
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
   
 document
   .querySelector('.signin-form')
@@ -87,3 +110,7 @@ document
 document
   .querySelector('.userinfo-form')
   .addEventListener('submit', userinfoFormHandler);
+
+  document
+  .querySelector(".user-editsec")
+  .addEventListener("submit", editUsernameHandler);
