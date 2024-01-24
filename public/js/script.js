@@ -143,6 +143,28 @@ const editCityHandler = async (event) => {
   }
 };
 
+// Function to handle edit workout
+const editWorkoutHandler = async (event) => {
+  event.preventDefault();
+
+  const workoutEdit = document.getElementById('workout-edit').value;
+
+  if (workoutEdit) {
+    // Send the captured values to the backend API endpoint
+    const response = await fetch('/api/profile', {
+      method: 'PUT',
+      body: JSON.stringify({ workoutEdit }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    // TO DO: changed to displaying a message
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
+
 document
   .querySelector('.signin-form')
   .addEventListener('submit', signInFormHandler);
@@ -167,4 +189,6 @@ document
   .querySelector(".city-editsec")
   .addEventListener("submit", editCityHandler);
 
-
+document
+  .querySelector(".workout-editsec")
+  .addEventListener("submit", editWorkoutHandler);
