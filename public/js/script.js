@@ -165,6 +165,30 @@ const editWorkoutHandler = async (event) => {
   }
 };
 
+// Function to handle edit gym
+const editGymHandler = async (event) => {
+  event.preventDefault();
+
+  const gymEdit = document.getElementById('gym-edit').value;
+
+  if (gymEdit) {
+    // Send the captured values to the backend API endpoint
+    const response = await fetch('/api/profile', {
+      method: 'PUT',
+      body: JSON.stringify({ gymEdit }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    // TO DO: changed to displaying a message
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
+
+
+
 document
   .querySelector('.signin-form')
   .addEventListener('submit', signInFormHandler);
@@ -192,3 +216,7 @@ document
 document
   .querySelector(".workout-editsec")
   .addEventListener("submit", editWorkoutHandler);
+
+document
+  .querySelector(".gym-editsec")
+  .addEventListener("submit", editGymHandler);
