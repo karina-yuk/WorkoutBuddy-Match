@@ -4,16 +4,16 @@
     </section>
     <section class="profile-info">
         <section class="profile-line user-editsec">
-            <input class="profile-field" id="user-edit" type="text" placeholder="Username">
+            <input class="profile-field" id="user-edit" type="text" value={{ userUsername }}>
             <button class="edit btn user-editbtn">Edit</button>
         </section>
         <section class="profile-line email-editsec">
-            <input class="profile-field" id="email-edit"type="text" placeholder="Email">
+            <input class="profile-field" id="email-edit"type="text" value={{ userEmail }}>
             <button class="edit-btn email-editbtn">Edit</button>
         </section>
         <section class="profile-line city-editsec">
             <select name="city-options" id="city-edit">
-                <option value="" disabled selected>Select a city</option>
+                <option value="" disabled selected>{{userCity}}</option>
                 <option value="TORONTO">TORONTO</option>
                 <option value="RICHMOND-HILL">RICHMOND HILL</option>
                 <option value="MARKHAM">MARKHAM</option>
@@ -36,7 +36,7 @@
 
         <section class="profile-line workout-editsec">
             <select name="workout-options" id="workout-edit">
-                <option value="" disabled selected>Select a workout</option>
+                <option value="" disabled selected>{{userWorkout}}</option>
                 <option value="Strength training">Strength training</option>
                 <option value="Aerobic exercise">Aerobic exercise</option>
                 <option value="Yoga">Yoga</option>
@@ -55,7 +55,7 @@
 
         <section class="profile-line gym-editsec">
             <select name="gym-options" id="gym-edit">
-                <option value="" disabled selected>Select a gym</option>
+                <option value="" disabled selected>{{userGym}}</option>
                 <option value="LA FITNESS">LA FITNESS</option>
                 <option value="GOODLIFE FITNESS">GOODLIFE FITNESS</option>
                 <option value="YMCA">YMCA</option>
@@ -70,5 +70,7 @@
         </section>
     </section>
 </div>
+
+
 
 <script src="../public/js/landingpage.js"></script>
