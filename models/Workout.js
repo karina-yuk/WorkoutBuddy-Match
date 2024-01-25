@@ -19,6 +19,9 @@ Workout.init(
       // validate: {
       //   len: [1, 30],
       // },
+      // validate: {
+      //   len: [1, 30],
+      // },
     },
 
   },
@@ -26,7 +29,9 @@ Workout.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    modelName: 'Workout',
+    modelName: 'workout',
+    TableName: 'WORKOUT',
+
   }
 );
 
