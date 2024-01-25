@@ -22,7 +22,7 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: [1, 15],
+        len: [1, 50],
       },
     },
 
@@ -42,17 +42,17 @@ User.init(
       },
     },
     gender: {
-      type: DataTypes.CHAR(1),
+      type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isIn: [['M', 'F', 'O', 'N']],
-      },
+      // validate: {
+      //   isIn: [['M', 'F', 'O', 'N']],
+      // },
     },
     gym_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: Gym,
+        model: 'Gym',
         key: 'gym_id',
       },
     },
@@ -60,7 +60,7 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: Workout,
+        model: 'Workout',
         key: 'workout_id',
       },
     },
@@ -68,7 +68,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [3,8],
+        len: [8, 50],
       },
     },
     gym_id: { // foreign key
@@ -94,8 +94,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
-    TableName: 'USER',
+    modelName: 'User',
+    // TableName: 'USER',
   }
 );
 

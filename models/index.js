@@ -1,14 +1,14 @@
 // import models
-const ProfilePic = require("./ProfilePic");
+// const ProfilePic = require("./ProfilePic");
 const User = require("./User");
 const Gym = require("./Gym");
 const City = require("./City");
 const Workout = require("./Workout");
 
-ProfilePic.belongsTo(User, {
-    foreignKey: "user_id",
-    as: "profile_pic",
-});
+// ProfilePic.belongsTo(User, {
+//     foreignKey: "user_id",
+//     as: "profile_pic",
+// });
 
 Gym.hasMany(User, {
     foreignKey: "gym_id",
@@ -31,4 +31,4 @@ User.hasOne(City, {
 });
 
 
-module.exports = { City, Gym, Workout, User, ProfilePic };
+module.exports = { City, Gym, Workout, User };
