@@ -7,7 +7,7 @@ class City extends Model {}
 
 City.init(
   {
-    city_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

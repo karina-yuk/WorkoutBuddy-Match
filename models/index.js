@@ -15,6 +15,11 @@ Gym.hasMany(User, {
     as: "gym_users",
 });
 
+User.belongsTo(Gym, {
+    foreignKey: "gym_id",
+    as: "gym",
+});
+
 Workout.hasMany(User, {
     foreignKey: "workout_id",
     as: "workout_users",
