@@ -74,13 +74,6 @@ User.init(
         len: [8, 50],
       },
     },
-    gym_id: { // foreign key
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'gym',
-        key: 'id',
-      },
-    }
 
   },
   {

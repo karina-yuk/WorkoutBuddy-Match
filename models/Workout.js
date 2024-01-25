@@ -1,11 +1,11 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connections');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connections");
 
 class Workout extends Model {}
 
 Workout.init(
   {
-    workout_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -19,9 +19,6 @@ Workout.init(
       // validate: {
       //   len: [1, 30],
       // },
-      // validate: {
-      //   len: [1, 30],
-      // },
     },
 
   },
@@ -29,11 +26,9 @@ Workout.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    modelName: 'workout',
-    TableName: 'WORKOUT',
-
+    modelName: "Workout",
+    //TableName: 'WORKOUT',
   }
 );
 
 module.exports = Workout;
-

@@ -35,7 +35,7 @@ const signupFormHandler = async (event) => {
 
   if (email && username && password) {
     // Send info to controller to process
-    const response = await fetch('/api/users', {
+    const response = await fetch('/api/user', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -61,7 +61,7 @@ const userinfoFormHandler = async (event) => {
 
   if (gender && city && gym && workout) {
     // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/users', {
+    const response = await fetch('/api/user', {
       method: 'POST',
       body: JSON.stringify({ gender, city, gym, workout }),
       headers: { 'Content-Type': 'application/json' },
