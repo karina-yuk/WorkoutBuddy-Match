@@ -7,7 +7,7 @@ class City extends Model {}
 
 City.init(
   {
-    city_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -17,16 +17,16 @@ City.init(
     city_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1, 15],
-      },
+      // validate: {
+      //   len: [1, 15],
+      // },
     },
   },
   {
     sequelize,
     freezeTableName: true,
-    modelName: 'city',
-    TableName: 'CITY'
+    modelName: 'City',
+    // TableName: 'CITY'
   }
 );
 

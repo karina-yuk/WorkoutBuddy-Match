@@ -5,7 +5,7 @@ class Gym extends Model {}
 
 Gym.init(
   {
-    gym_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -15,7 +15,7 @@ Gym.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: User,
+        model: 'User',
         key: "user_id",
       },
     },
@@ -23,17 +23,17 @@ Gym.init(
     gym_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        len: [1, 15],
-      },
+      // unique: true,
+      // validate: {
+      //   len: [1, 15],
+      // },
     },
   },
   {
     sequelize,
     freezeTableName: true,
-    modelName: "gym",
-    TableName: "GYM",
+    modelName: 'Gym',
+    // TableName: "GYM",
   }
 );
 
