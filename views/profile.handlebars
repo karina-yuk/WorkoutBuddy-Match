@@ -1,36 +1,74 @@
-<section class="card">
-<section class="card-header">
-    <h2>Profile</h2>
-</section>
-<section class="profile">
+<div class="card">
+    <section class="card-header">
+        <h2>Profile</h2>
+    </section>
     <section class="profile-info">
-        <section class="profile-line">
-            <input class="profile-field" type="text">
+        <section class="profile-line user-editsec">
+            <input class="profile-field" id="user-edit" type="text" placeholder="Username">
+            <button class="edit btn user-editbtn">Edit</button>
+        </section>
+        <section class="profile-line email-editsec">
+            <input class="profile-field" id="email-edit"type="text" placeholder="Email">
+            <button class="edit-btn email-editbtn">Edit</button>
+        </section>
+        <section class="profile-line city-editsec">
+            <select name="city-options" id="city-edit">
+                <option value="" disabled selected>Select a city</option>
+                <option value="TORONTO">TORONTO</option>
+                <option value="RICHMOND-HILL">RICHMOND HILL</option>
+                <option value="MARKHAM">MARKHAM</option>
+                <option value="SCARBOROUGH">SCARBOROUGH</option>
+                <option value="BRAMPTON">BRAMPTON</option>
+                <option value="AJAX">AJAX</option>
+                <option value="OAKVILLE">OAKVILLE</option>
+                <option value="MISSISSAUGA">MISSISSAUGA</option>
+                <option value="BURLINGTON">BURLINGTON</option>
+                <option value="MILTON">MILTON</option>
+                <option value="CALEDON">CALEDON</option>
+                <option value="HALTON HILLS">HALTON HILLS</option>
+                <option value="NEWMARKET">NEWMARKET</option>
+                <option value="OSHAWA">OSHAWA</option>
+                <option value="YORK">YORK</option>
+                <option value="VAUGHAN">VAUGHAN</option>
+            </select>
             <button class="edit-btn">Edit</button>
         </section>
-        <section class="profile-line">
-            <input class="profile-field" type="text">
-            <button class="edit-btn">Edit</button>
+
+        <section class="profile-line workout-editsec">
+            <select name="workout-options" id="workout-edit">
+                <option value="" disabled selected>Select a workout</option>
+                <option value="Strength training">Strength training</option>
+                <option value="Aerobic exercise">Aerobic exercise</option>
+                <option value="Yoga">Yoga</option>
+                <option value="High-intensity training">High-intensity training</option>
+                <option value="Pilates">Pilates</option>
+                <option value="Walking">Walking</option>
+                <option value="Running">Running</option>
+                <option value="Functional strength training">Functional strength training</option>
+                <option value="Core training">Core training</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Weight lifting">Weight lifting</option>
+            </select>
+            <button class="edit-btn workout-editbtn">Edit</button>
         </section>
-        <section class="profile-line">
-            <input class="profile-field" type="text">
-            <button class="edit-btn">Edit</button>
+
+        <section class="profile-line gym-editsec">
+            <select name="gym-options" id="gym-edit">
+                <option value="" disabled selected>Select a gym</option>
+                <option value="LA FITNESS">LA FITNESS</option>
+                <option value="GOODLIFE FITNESS">GOODLIFE FITNESS</option>
+                <option value="YMCA">YMCA</option>
+                <option value="ORANGETHEORY FITNESS">ORANGETHEORY FITNESS</option>
+                <option value="BODY VISION FITNESS">BODY VISION FITNESS</option>
+                <option value="UP & FIT FITNESS">UP &amp; FIT FITNESS</option>
+            </select>
+            <button class="edit-btn gym-editbtn">Edit</button>
         </section>
-        <section class="profile-line">
-            <input class="profile-field" type="text">
-            <button class="edit-btn">Edit</button>
-        </section>
-        <section class="profile-line">
-            <input class="profile-field" type="text">
-            <button class="edit-btn">Edit</button>
-        </section>
-        <section class="profile-line">
-            <input class="profile-field" type="text">
-            <button class="edit-btn">Edit</button>
+        <section id="delete-account" type="submit">
+             <button class="button">Delete Account</button>
         </section>
     </section>
-    <button class="button">Delete Account</button>
-</section>
-</section>
+</div>
 
 <script src="../public/js/landingpage.js"></script>
