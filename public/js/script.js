@@ -50,174 +50,34 @@ const signupFormHandler = async (event) => {
   }
 };
 
-//TODO ADD function to handle user info selections
-const userinfoFormHandler = async (event) => {
-  event.preventDefault();
-
-  const gender = document.getElementById('gender-options').value;
-  const city = document.getElementById('city-options').value;
-  const gym = document.getElementById('gym-options').value;
-  const workout = document.getElementById('workout-options').value;
-
-  if (gender && city && gym && workout) {
-    // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/users', {
-      method: 'POST',
-      body: JSON.stringify({ gender, city, gym, workout }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-      document.location.replace('/postings');
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-
-// Function to handle edit username
-const editUsernameHandler = async (event) => {
-  event.preventDefault();
-
-  const usernameEdit = document.getElementById('user-edit').value;
-
-  if (usernameEdit) {
-    // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
-      method: 'PUT',
-      body: JSON.stringify({ usernameEdit }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-      // TO DO: changed to displaying a message
-      // Maybe with "document.body.appendChild(`Successfully updated the username.`);"?
-      document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-
-// Function to handle edit email
-const editEmailHandler = async (event) => {
-  event.preventDefault();
-
-  const emailEdit = document.getElementById('email-edit').value;
-
-  if (emailEdit) {
-    // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
-      method: 'PUT',
-      body: JSON.stringify({ emailEdit }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-    // TO DO: changed to displaying a message
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-
-// Function to handle edit city
-const editCityHandler = async (event) => {
-  event.preventDefault();
-
-  const cityEdit = document.getElementById('city-edit').value;
-
-  if (cityEdit) {
-    // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
-      method: 'PUT',
-      body: JSON.stringify({ cityEdit }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-    // TO DO: changed to displaying a message"
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-
-// Function to handle edit workout
-const editWorkoutHandler = async (event) => {
-  event.preventDefault();
-
-  const workoutEdit = document.getElementById('workout-edit').value;
-
-  if (workoutEdit) {
-    // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
-      method: 'PUT',
-      body: JSON.stringify({ workoutEdit }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-    // TO DO: changed to displaying a message
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-
-// Function to handle edit gym
-const editGymHandler = async (event) => {
-  event.preventDefault();
-
-  const gymEdit = document.getElementById('gym-edit').value;
-
-  if (gymEdit) {
-    // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
-      method: 'PUT',
-      body: JSON.stringify({ gymEdit }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-    // TO DO: changed to displaying a message
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-
-// Function to handle delete account
-async function deleteAccountHandler() {
-
-  const confirmDeletion = confirm('Are you sure you want to delete your account?');
-
-  if (confirmDeletion) {
-    try {
-      // Send a DELETE request to the server
-      const response = await fetch('/api/delete-account', {
-        method: 'DELETE',
+  //TODO ADD function to handle user info selections
+  const userinfoFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const gender = document.getElementById('gender-options').value;
+    const city = document.getElementById('city-options').value;
+    const gym = document.getElementById('gym-options').value;
+    const workout = document.getElementById('workout-options').value;
+  
+    if (gender && city && gym && workout) {
+      // Send the captured values to the backend API endpoint
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({ gender, city, gym, workout }),
         headers: { 'Content-Type': 'application/json' },
       });
-
+  
       if (response.ok) {
-        // If deletion is successful, redirect the user to the home page.
-        document.location.replace('/'); 
+        document.location.replace('/postings');
       } else {
-        // Handle errors, show an alert
-        alert('Unable to delete the account: ' + response.statusText);
+        alert(response.statusText);
       }
-    } catch (error) {
-      // Handle network or other errors
-      console.error('Error:', error);
-      alert('An unexpected error occurred while deleting the account.');
     }
-  }
-}
-
-document
-  .querySelector('.signin-form')
-  .addEventListener('submit', signInFormHandler);
+  };
+  
+  document
+    .querySelector('.signin-form')
+    .addEventListener('submit', signInFormHandler);
 
 document
   .querySelector('.signup-form')
