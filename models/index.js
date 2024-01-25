@@ -6,14 +6,14 @@ const City = require("./City");
 const Workout = require("./Workout");
 const user_workout = require("./user_workout")
 
-ProfilePic.belongsTo(User, {
-    foreignKey: "user_id",
-    as: "profile_pic",
-});
-User.hasOne(ProfilePic,  {
-    foreignKey: "user_id",
-    as: "profile_pic",
-});
+//ProfilePic.belongsTo(User, {
+//  foreignKey: "user_id",
+//as: "profile_pic",
+//});
+//User.hasOne(ProfilePic,  {
+//    foreignKey: "user_id",
+//   as: "profile_pic",
+//});
 
 Gym.hasMany(User, {
     foreignKey: "gym_id",
