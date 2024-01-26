@@ -49,7 +49,6 @@ User.init(
       // validate: {
       //   isIn: [['M', 'F', 'O', 'N']],
       // },
-
     },
     gym_id: {
       type: DataTypes.INTEGER,
@@ -64,6 +63,14 @@ User.init(
       allowNull: false,
       references: {
         model: 'workout',
+        key: 'id',
+      },
+    },
+    city_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'city',
         key: 'id',
       },
     },

@@ -9,12 +9,14 @@ const gymData = [
   },
   {
     gym_name: "YMCA",
+
   },
   {
     gym_name: "ORANGETHEORY FITNESS",
   },
   {
     gym_name: "BODY VISION FITNESS",
+
   },
   {
     gym_name: "UP & FIT FITNESS",
