@@ -11,14 +11,14 @@ Gym.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'User',
-        key: "user_id",
-      },
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'user',
+    //     key: "id",
+    //   },
+    // },
 
     gym_name: {
       type: DataTypes.STRING,
@@ -32,7 +32,7 @@ Gym.init(
   {
     sequelize,
     freezeTableName: true,
-    modelName: 'Gym',
+    modelName: 'gym',
     // TableName: "GYM",
   }
 );

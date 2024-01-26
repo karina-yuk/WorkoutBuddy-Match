@@ -1,4 +1,4 @@
-const { Workout } = require("../Develop/models");
+const { Workout } = require("../models");
 
 const workoutData = [
   {
@@ -39,6 +39,6 @@ const workoutData = [
   },
 ];
 
-const seedWorkouts = () => workout.bulkCreate(workoutData);
+const seedWorkouts = () => Workout.bulkCreate(workoutData);
 
 module.exports = seedWorkouts;
