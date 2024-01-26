@@ -8,16 +8,16 @@ user_workout.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "User",
-        key: "user_id",
+        model: "user",
+        key: "id",
         unique: false,
       },
     },
     Workout_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "Workout",
-        key: "workout_id",
+        model: "workout",
+        key: "id",
         unique: false,
       },
     },

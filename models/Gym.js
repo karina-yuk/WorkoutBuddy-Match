@@ -15,8 +15,8 @@ Gym.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'User',
-        key: "user_id",
+        model: 'user',
+        key: "id",
       },
     },
 
@@ -32,7 +32,7 @@ Gym.init(
   {
     sequelize,
     freezeTableName: true,
-    modelName: 'Gym',
+    modelName: 'gym',
     // TableName: "GYM",
   }
 );

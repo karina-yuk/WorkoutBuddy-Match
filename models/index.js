@@ -27,7 +27,7 @@ User.hasOne(Gym,  {
 
 Workout.hasMany(User, {
     foreignKey: "workout_id",
-    as: "user_workout",
+    as: "userWorkouts",
 });
 
 User.belongsToMany(Workout, {  //defining the through table for the many to many relationship
@@ -36,7 +36,7 @@ User.belongsToMany(Workout, {  //defining the through table for the many to many
         unique: false
       },
       // Define an alias for when data is retrieved
-      as: 'user_workout'
+    //   as: 'user_workout'
 })
 
 User.hasOne(City, {

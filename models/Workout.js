@@ -26,7 +26,7 @@ Workout.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    modelName: "Workout",
+    modelName: "workout",
     //TableName: 'WORKOUT',
   }
 );
