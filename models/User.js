@@ -55,16 +55,16 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Gym',
-        key: 'gym_id',
+        model: 'gym',
+        key: 'id',
       },
     },
     workout_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Workout',
-        key: 'workout_id',
+        model: 'workout',
+        key: 'id',
       },
     },
     password: {
@@ -91,7 +91,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
+    modelName: 'user',
     // TableName: 'USER',
   }
 );
