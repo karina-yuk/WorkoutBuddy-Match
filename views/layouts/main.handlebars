@@ -18,7 +18,7 @@
         <nav>
             {{#if logged_in}}
             <a href="/posting">Profile</a> |
-            <button class="no-button" id="logout">Sign Out</button>
+            <button class="button" id="signout">Sign Out</button>
             {{else}}
             <a href="/login">Sign In</a>
             {{/if}}
@@ -32,7 +32,7 @@
     </footer>
 
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+    <script src="/js/signout.js"></script>
     {{/if}}
     <script src="/js/script.js"></script>
 </body>
