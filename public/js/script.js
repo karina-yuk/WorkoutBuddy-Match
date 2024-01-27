@@ -83,7 +83,7 @@ const editUsernameHandler = async (event) => {
 
   if (usernameEdit) {
     // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
+    const response = await fetch('/api/user', {
       method: 'PUT',
       body: JSON.stringify({ usernameEdit }),
       headers: { 'Content-Type': 'application/json' },
@@ -107,7 +107,7 @@ const editEmailHandler = async (event) => {
 
   if (emailEdit) {
     // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
+    const response = await fetch('/api/user', {
       method: 'PUT',
       body: JSON.stringify({ emailEdit }),
       headers: { 'Content-Type': 'application/json' },
@@ -129,7 +129,7 @@ const editCityHandler = async (event) => {
 
   if (cityEdit) {
     // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
+    const response = await fetch('/api/city', {
       method: 'PUT',
       body: JSON.stringify({ cityEdit }),
       headers: { 'Content-Type': 'application/json' },
@@ -151,7 +151,7 @@ const editWorkoutHandler = async (event) => {
 
   if (workoutEdit) {
     // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
+    const response = await fetch('/api/workout', {
       method: 'PUT',
       body: JSON.stringify({ workoutEdit }),
       headers: { 'Content-Type': 'application/json' },
@@ -173,7 +173,7 @@ const editGymHandler = async (event) => {
 
   if (gymEdit) {
     // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/profile', {
+    const response = await fetch('/api/gym', {
       method: 'PUT',
       body: JSON.stringify({ gymEdit }),
       headers: { 'Content-Type': 'application/json' },
@@ -195,7 +195,7 @@ async function deleteAccountHandler() {
   if (confirmDeletion) {
     try {
       // Send a DELETE request to the server
-      const response = await fetch('/api/delete-account', {
+      const response = await fetch('/api/user', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
       });
