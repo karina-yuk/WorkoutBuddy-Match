@@ -28,13 +28,13 @@ User.init(
       },
     },
 
-    full_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-      len: [1, 45],
-      },
-    },
+    // full_name: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //   len: [1, 45],
+    //   },
+    // },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

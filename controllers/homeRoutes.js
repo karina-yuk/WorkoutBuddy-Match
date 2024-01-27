@@ -24,6 +24,7 @@ router.get('/', async (req, res) => {
     }
   });
 
+  // I know I approved this, but aren't these put request that interacts with the database? If so, these should be in the different api route files instead of in the homeRoutes?
   router.put('/api/profile', async (req, res) => {
     try {
       const { usernameEdit, emailEdit, cityEdit, workoutEdit, gymEdit } = req.body;
