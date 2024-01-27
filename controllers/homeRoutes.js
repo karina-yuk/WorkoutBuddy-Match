@@ -86,6 +86,74 @@ router.get('/postings', async (req,res) =>{
     }
 })
 
+// router.get('/profile', async (req, res) => {
+//   try {
+//     // Get all projects and JOIN with user data
+//     const userData = await User.findAll({
+//       include: [
+//         {
+//           model: Gym,
+//           attributes: ['gym_name'],
+//           // as: 'gym_user'
+//         },
+//         {  model: City,
+//           attributes: ['city_name'],
+//           //     as: 'city'
+//         },
+//         {
+//           model: Workout,
+//           attributes: ['workout_name'],
+//         }
+//       ],
+//       attributes: ['username', 'email', 'gender'],
+//     });
+//     // Serialize data so the template can read it
+//     const userPost = userData.map((userPost) => userPost.get({ plain: true }));
+//     // Pass serialized data and session flag into template
+//     console.log(userPost)
+//     res.render('profile', {
+//       userPost,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+ router.get('/userinfo', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const userData = await User.findAll({
+      include: [
+        {
+          model: Gym,
+          attributes: ['gym_name'],
+          // as: 'gym_user'
+        },
+        {  model: City,
+          attributes: ['city_name'],
+          //     as: 'city'
+        },
+        {
+          model: Workout,
+          attributes: ['workout_name'],
+        }
+      ],
+      attributes: ['username', 'email', 'gender'],
+    });
+    // Serialize data so the template can read it
+    const userPost = userData.map((userPost) => userPost.get({ plain: true }));
+    // Pass serialized data and session flag into template
+    console.log(userPost)
+    res.render('userinfo', {
+      userPost,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // 
 router.get('/signin', async (req, res) => {
   res.render('signin')

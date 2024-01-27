@@ -61,7 +61,7 @@ const userinfoFormHandler = async (event) => {
 
   if (gender && city && gym && workout) {
     // Send the captured values to the backend API endpoint
-    const response = await fetch('/api/user', {
+    const response = await fetch('/api/user/userinfo', {
       method: 'POST',
       body: JSON.stringify({ gender, city, gym, workout }),
       headers: { 'Content-Type': 'application/json' },
