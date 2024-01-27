@@ -3,7 +3,7 @@ const { User } = require("../models");
 const userData = [
   {
     username: "TJ",
-    full_name:"Tom Jones",
+    // full_name:"Tom Jones",
     email: "tjmax@gmail.com",
     gender: "Male",
     gym_id: 1,
@@ -13,7 +13,7 @@ const userData = [
   },
   {
     username: "PI",
-    full_name:"Patricia Ians",
+    // full_name:"Patricia Ians",
     email: "pimin@gmail.com",
     gender: "Female",
     gym_id: 2,
