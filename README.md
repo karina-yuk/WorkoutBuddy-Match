@@ -1,14 +1,13 @@
 # WorkoutBuddy-Match
-An application that user can use to find workout buddies.
 
 ## Description
+An application that user can use to find workout buddies.
 
 ## Table of Contents
 - [Description](#description)
 - [Installations](#installations)
 - [Usage](#usage)
 - [Demo](#demo)
-- [Credits](#credits)
 - [License](#license)
 
 ## Installations
@@ -34,3 +33,29 @@ For returning users, find a new workout buddy by first signing in. Update the in
 
 ---
 © 2024 Workout Buddy App
+
+
+<!-- 1. When I open the DTF,
+Then I am presented with the options to either Sign Up or Sign In.
+2. When I click on Sign Up,
+Then I am presented with a page with textboxes where the email, password, and username can be provided for the sign up.
+3. When I have signed up,
+Then I will be presented with a create profile page where I can add in my information: city, workouts, gym, gender, and select an avatar.
+4. When I click on Sign In,
+Then I am presented with a page with textboxes where the username, password, and workout for today can be provided for the sign in.
+5. When I finished creating the profile page or once I logged in,
+Then I am presented with the posting page where I get to see all the potential gym buddies.
+6. When I click on the "ON" button on the "Posting" page,
+Then my profile card shows up and is welcomed to be contacted to hit the gym together.
+7. When I click on the "OFF" button on the "Posting" page,
+Then my profile card does not show up on the page.
+8. When I click on the "City" filter,
+Then I only see people in the same location on the "Posting" page.
+9. When I click on the "Gym" filter,
+Then I only see people that goes to the chosen gym on the "Posting" page.
+10. When I click on the "Workout" filter,
+Then I only see people that want to do the chosen workout on the "Posting" page.
+11. When I click on the "Profile" tab,
+Then I'm presented with the page where I can edit the previously saved info: username, city, workout, gym, and email.
+12. When I click on Sign Out,
+Then I am logged out and should see DTF main page. -->
