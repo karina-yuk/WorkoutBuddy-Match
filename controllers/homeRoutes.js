@@ -24,31 +24,31 @@ router.get('/', async (req, res) => {
     }
   });
 
-  // I know I approved this, but aren't these put request that interacts with the database? If so, these should be in the different api route files instead of in the homeRoutes?
-  router.put('/api/profile', async (req, res) => {
-    try {
-      const { usernameEdit, emailEdit, cityEdit, workoutEdit, gymEdit } = req.body;
-      if (usernameEdit) {
-        await profile.update({username: usernameEdit}, { where: { Id: req.user.id } }); //assign to ID in  table
-      }
-      if (emailEdit) {
-        await profile.update({emai: emailEdit}, { where: { Id: req.user.id } });   //assign to ID in  table
-      }
-      if (cityEdit) {
-        await profile.update({city: cityEdit}, { where: { Id: req.city.id } }); //assign to ID in  table
-      }
-      if (workoutEdit) {
-        await profile.update({workout: workoutEdit}, { where: { Id: req.workout.id } }); //assign to ID in  table
-      }
-      if (gymEdit) {
-        await profile.update({username: gymEdit}, { where: { Id: req.gym.id } }); //assign to ID in  table
-      }
-      res.status(200).json({ message: 'update success' });
-    } catch (error) {
-        console.error('error:', error);
-    }
+  // // I know I approved this, but aren't these put request that interacts with the database? If so, these should be in the different api route files instead of in the homeRoutes?
+  // router.put('/api/profile', async (req, res) => {
+  //   try {
+  //     const { usernameEdit, emailEdit, cityEdit, workoutEdit, gymEdit } = req.body;
+  //     if (usernameEdit) {
+  //       await profile.update({username: usernameEdit}, { where: { Id: req.user.id } }); //assign to ID in  table
+  //     }
+  //     if (emailEdit) {
+  //       await profile.update({emai: emailEdit}, { where: { Id: req.user.id } });   //assign to ID in  table
+  //     }
+  //     if (cityEdit) {
+  //       await profile.update({city: cityEdit}, { where: { Id: req.city.id } }); //assign to ID in  table
+  //     }
+  //     if (workoutEdit) {
+  //       await profile.update({workout: workoutEdit}, { where: { Id: req.workout.id } }); //assign to ID in  table
+  //     }
+  //     if (gymEdit) {
+  //       await profile.update({username: gymEdit}, { where: { Id: req.gym.id } }); //assign to ID in  table
+  //     }
+  //     res.status(200).json({ message: 'update success' });
+  //   } catch (error) {
+  //       console.error('error:', error);
+  //   }
 
-  });
+  // });
 
 
 router.get('/postings', async (req,res) =>{
@@ -85,5 +85,15 @@ router.get('/postings', async (req,res) =>{
         res.status(500).json(err);
     }
 })
+
+// 
+router.get('/signin', async (req, res) => {
+  res.render('signin')
+})
+
+router.get('/signup', async (req, res) => {
+  res.render('signup')
+})
+
 
 module.exports = router;
