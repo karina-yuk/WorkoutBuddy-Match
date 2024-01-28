@@ -9,23 +9,24 @@
 </head>
 
 <body>
-    <header class="header-section">
-        <h1 class="app-top-bar">
-            <span class="app-name">DTF</span>
-            <img src="/assets/man-running-sprinting-silhouette-flat-260nw-305799401.webp"
-                alt="Person running.">
-        </h1>
-        <nav>
-            {{#if logged_in}}
-            <a href="/postings">Postings</a>
-            <a href="/profile">Profile</a> |
-            <button class="button" id="signout">Sign Out</button>            
-            {{/if}}
-        </nav>
-    </header>
-    <main class="container" id="background-img">
-        {{{ body }}}
-    </main>
+    {{!-- <section class="body-container"> --}}
+        <header class="header-section">
+            <h1 class="app-top-bar">
+                <span class="app-name">DTF</span>
+                <img class="main-image" src="/assets/man-running.png" alt="Person running.">
+            </h1>
+            <nav class="nav-bar">
+                {{!-- {{#if logged_in}} --}}
+                <a href="/postings" class="main-buttons">Postings</a>
+                <a href="/profile" class="main-buttons">Profile</a>
+                <button class="button main-buttons" id="signout">Sign Out</button>
+                {{!-- {{/if}} --}}
+            </nav>
+        </header>
+        <main class="card-container">
+           {{{ body }}}
+        </main>
+    {{!-- </section> --}}
     <footer>
         <p>DTF TEAM SINCE 2024</p>
     </footer>
@@ -33,7 +34,7 @@
     {{#if logged_in}}
     <script src="/js/signout.js"></script>
     {{/if}}
-    {{!-- <script src="/js/script.js"></script> --}}
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

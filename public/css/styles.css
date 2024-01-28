@@ -3,14 +3,16 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-
+    background-image: url(/assets/womanrunning2.png);
+    background-repeat: no-repeat;
 }
 
 .header-section{
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 5px 30px hsl(0, 0%, 50%);
+    box-shadow: 0px 5px 30px hsl(0, 0%, 0% , 0.2);
+    width: 100%;
 }
 
 .app-name {
@@ -21,7 +23,7 @@ body{
 }
 
 .main-image{
-    width: 60px;
+    width: 55px;
 }
 
 .nav-bar{
@@ -49,11 +51,72 @@ body{
     transition: 0.3s;
     text-decoration-line: underline;
     text-decoration-skip-ink: none;
-    text-decoration-thickness: 20% ;
+    text-decoration-thickness: 15% ;
     cursor: pointer;
     font-size: 90%;
 }
 
+.main-buttons:active{
+    transition: 0.3s;
+    font-size: 85%;
+}
+
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+}
+
+.landing-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.10);
+    height: 50vh;
+    width: 60vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.landing-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+ 
+}
+
+.landing-button{
+    margin-top: 1rem;
+    background-color: rgb(85, 85, 85);
+    text-decoration: none;
+    font-size: 130%;
+    padding: 3%;
+    color: white;
+    border-radius: 3px;
+    border-style: none;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    transition: 0.3s;
+    width: 35%
+}
+
+.landing-button:hover{
+    transition: 0.3s;
+    background-color: rgb(61, 61, 61);
+}
+
+.landing-button:active {
+    box-shadow: inset 0 0.6em 2em -0.3em rgba(44, 44, 44, 0.5), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+}
 
 
 
@@ -68,10 +131,14 @@ body{
 
 
 
-
-
-
-footer{
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     font-size: smaller;
-}
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.70);
+    padding: 0.1%;
+  }
