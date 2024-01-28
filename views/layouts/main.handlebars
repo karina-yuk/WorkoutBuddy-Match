@@ -9,24 +9,22 @@
 </head>
 
 <body>
-    {{!-- <section class="body-container"> --}}
         <header class="header-section">
             <h1 class="app-top-bar">
                 <span class="app-name">DTF</span>
                 <img class="main-image" src="/assets/man-running.png" alt="Person running.">
             </h1>
             <nav class="nav-bar">
-                {{!-- {{#if logged_in}} --}}
+                {{#if logged_in}}
                 <a href="/postings" class="main-buttons">Postings</a>
                 <a href="/profile" class="main-buttons">Profile</a>
                 <button class="button main-buttons" id="signout">Sign Out</button>
-                {{!-- {{/if}} --}}
+                {{/if}}
             </nav>
         </header>
         <main class="card-container">
            {{{ body }}}
         </main>
-    {{!-- </section> --}}
     <footer>
         <p>DTF TEAM SINCE 2024</p>
     </footer>

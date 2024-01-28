@@ -69,7 +69,8 @@ body{
     height:80vh;
 }
 
-.landing-page{
+.landing-page,
+.signup-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,7 +85,8 @@ body{
     padding-right: 1rem;
 }
 
-.landing-options{
+.landing-options,
+.signup-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +97,8 @@ body{
  
 }
 
-.landing-button{
+.landing-button,
+.signUpBtn{
     margin-top: 1rem;
     background-color: rgb(85, 85, 85);
     text-decoration: none;
@@ -106,16 +109,23 @@ body{
     border-style: none;
     box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
     transition: 0.3s;
-    width: 35%
+    width: 35%;
+    cursor: pointer;
 }
 
-.landing-button:hover{
+.landing-button:hover,.signUpBtn:hover{
     transition: 0.3s;
     background-color: rgb(61, 61, 61);
 }
 
-.landing-button:active {
+.landing-button:active,.signUpBtn:active {
     box-shadow: inset 0 0.6em 2em -0.3em rgba(44, 44, 44, 0.5), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+}
+
+.input-field{
+    margin-bottom: 1rem;
+    font-size: 110%;
+    padding: 0.5%;
 }
 
 
