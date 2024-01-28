@@ -1,16 +1,15 @@
+<section class="card postings-page">
 {{#each postInfo}}
-<section class="card">
     <section class="post">
-        <img src="" alt="">
-        <section class="post-info">
+        {{!-- <section class="post-info"> --}}
             <ul class="post-list">
-                <li class="post-item" id="name">Name: {{username}}</li>
-                <li class="post-item" id="city">City: {{this.city.city_name}}</li>
-                <li class="post-item" id="gym">Gym: {{this.gym.gym_name}}</li>
-                <li class="post-item" id="workout">Workout: {{this.workout.workout_name}}</li>
-                <li class="post-item" id="email">Contact them: {{this.email}}</li>
+                <li class="post-item post-item-name" id="name">{{username}}</li>
+                <li class="post-item" id="city">{{this.city.city_name}}</li>
+                <li class="post-item" id="gym">{{this.gym.gym_name}}</li>
+                <li class="post-item" id="workout">{{this.workout.workout_name}}</li>
+                <li class="post-item" id="email">{{this.email}}</li>
             </ul>
-        </section>
+        {{!-- </section> --}}
     </section>
-</section>
 {{/each}}
+</section>
