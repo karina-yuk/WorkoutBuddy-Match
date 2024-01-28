@@ -21,6 +21,16 @@ const userData = [
     city_id: 2,
     password:"abcdefgh"
   },
+  {
+  username: "JD",
+  // full_name:"Jane Doe",
+  email: "jdoe@gmail.com",
+  gender: "Female",
+  gym_id: 3,
+  workout_id: 5,
+  city_id: 1,
+  password:"password"
+},
 ];
 
 const seedUsers = () => User.bulkCreate(userData);
