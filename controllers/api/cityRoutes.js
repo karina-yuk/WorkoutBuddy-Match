@@ -39,6 +39,20 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) =>{
+  try{
+      const cityData = await City.update(req.body,{where:{id:req.params.id}})
+      if (!cityData) {
+          res.status(404).json({ message: 'No city found with this id!' });
+          return;
+      }
+      res.status(200).json(cityData);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+} )
+
+
 
 // CREATE a city
 //router.post("/", async (req, res) => {
