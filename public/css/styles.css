@@ -70,6 +70,7 @@ h2{
     justify-content: center;
     align-items: center;
     height: 82.5vh;
+    width: 100%;
 }
 
 .landing-page,
@@ -215,12 +216,12 @@ h2{
     padding: 0.5%;
 }
 
-.posting-page {
+/* .posting-page {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-}
+} */
 
 .post{
     margin: 2rem;
@@ -236,6 +237,7 @@ h2{
 
 .post-list {
     padding: 0;
+    list-style-type: none;
 }
 
 .post-item {
