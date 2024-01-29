@@ -9,12 +9,11 @@ const signInFormHandler = async (event) => {
   
     if (username && password ) {
       // Send the username and password to the server
-      const response = await fetch('/api/user/login', {
+      const response = await fetch('/api/user/signin', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-          // TODO: Added warning messages when signup failed and why.
       if (response.ok) {
         document.location.replace('/posting');
       } else {

@@ -1,4 +1,4 @@
-//TODO ADD function to handle user info selections
+//Function to handle user info selections
 const userinfoFormHandler = async (event) => {
     event.preventDefault();
   

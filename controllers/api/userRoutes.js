@@ -16,8 +16,8 @@ router.post('/', async (req, res) => {
 });
 
 
-// The `/api/user/login` endpoint - Login users
-router.post('/login', async (req, res) => {
+// The `/api/user/signin` endpoint - Login users
+router.post('/signin', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { username: req.body.username } });
         if (!userData) {
