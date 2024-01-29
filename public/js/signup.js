@@ -1,4 +1,3 @@
-
 // Function to handle signup
 const signupFormHandler = async (event) => {
     event.preventDefault();
@@ -10,7 +9,7 @@ const signupFormHandler = async (event) => {
   
     if (email && username && password) {
       // Send info to controller to process
-      const response = await fetch('/api/user', {
+      const response = await fetch('/api/user/signup', {
         method: 'POST',
         body: JSON.stringify({ username, email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -20,7 +19,6 @@ const signupFormHandler = async (event) => {
         document.location.replace('/userinfo');
       } else {
         alert(response.statusText);
-        // TODO: Added warning messages when signup failed and why.
       }
     }
     console.log("errorsignup")
