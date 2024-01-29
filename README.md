@@ -7,7 +7,7 @@ An application that user can use to find workout buddies.
 - [Description](#description)
 - [Installations](#installations)
 - [Usage](#usage)
-- [Credit](#credit)
+- [Credits](#credits)
 - [License](#license)
 
 ## Installations
@@ -38,9 +38,9 @@ Sign up page:
 ![landing page](/public/assets/signup.png)
 User information page:
 ![landing page](/public/assets/userinfo.png)
-Postings page:
+After signing in - Postings page:
 ![landing page](/public/assets/posting.png)
-Profile page:
+After signing in - Profile page:
 ![landing page](/public/assets/profile.png)
 
 
