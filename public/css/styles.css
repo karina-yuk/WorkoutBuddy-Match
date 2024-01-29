@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(/assets/womanrunning2.png);
     background-repeat: no-repeat;
 }
@@ -18,6 +18,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     margin-left: 2rem;
+    cursor: default;
+}
+
+h2{
+    cursor:default;
 }
 
 .main-image {
@@ -69,7 +74,7 @@ body {
 
 .landing-page,
 .signup-page,
-.signin-page {
+.signin-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,7 +83,23 @@ body {
     text-align: center;
     border-radius: 3px;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.10);
-    height: 50%;
+    height: 60%;
+    width: 30%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.userinfo-page,
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.10);
+    height: 70%;
     width: 30%;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -86,20 +107,28 @@ body {
 
 .landing-options,
 .signup-form,
-.signin-form {
+.signin-form,
+.userinfo-form,
+.profile-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: space-between;
+    gap: 10px;
     margin-top: 2rem;
     width: 100%;
+}
 
+#delete-account{
+    width: 100%;
 }
 
 .landing-button,
 .signUpBtn,
-.signInBtn {
+.signInBtn,
+.userBtn,
+.delete-button {
     margin-top: 1rem;
     background-color: rgb(85, 85, 85);
     text-decoration: none;
@@ -116,15 +145,68 @@ body {
 
 .landing-button:hover,
 .signUpBtn:hover,
-.signInBtn:hover {
+.signInBtn:hover,
+.userBtn:hover,
+.delete-button:hover {
     transition: 0.3s;
     background-color: rgb(61, 61, 61);
 }
 
 .landing-button:active,
 .signUpBtn:active,
-.signInBtn:active {
+.signInBtn:active,
+.userBtn:active,
+.delete-button:active {
     box-shadow: inset 0 0.6em 2em -0.3em rgba(44, 44, 44, 0.5), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+}
+
+.edit-btn{
+    background-color: rgb(85, 85, 85);
+    color: white;
+    border-radius: 3px;
+    border-style: none;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    transition: 0.3s;
+    height: 80%;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.edit-btn:hover{
+    transition: 0.3s;
+    background-color: rgb(61, 61, 61);
+}
+
+.edit-btn:active{
+    box-shadow: inset 0 0.6em 2em -0.3em rgba(44, 44, 44, 0.5), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+}
+
+.profile-field{
+    width: 192px;
+    height: 22px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#city-edit,
+#workout-edit,
+#gym-edit{
+    width: 200px;
+    padding: 2px;
+    height: 27px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.userinforForm-dropdown{
+    margin-bottom: 1rem;
+    font-size: 110%;
+    padding: 0.5%;
+    cursor: pointer;
+    width: 250px;
+    text-align: center;
 }
 
 .input-field {
@@ -174,20 +256,6 @@ body {
     text-align: left;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
     position: fixed;
     left: 0;
@@ -198,4 +266,14 @@ footer {
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.70);
     padding: 0.025%;
+    cursor: default;
+}
+
+@media screen and (max-device-width: 857px) {
+    .profile-page{
+        height: 80%;
+    }
+    .edit-btn{
+        height: 40%;
+    }
 }

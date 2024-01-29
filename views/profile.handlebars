@@ -1,11 +1,11 @@
-<div class="card">
+<div class="card, profile-page">
     <section class="card-header">
         <h2>Profile</h2>
     </section>
     <section class="profile-info">
         <section class="profile-line user-editsec">
             <input class="profile-field" id="user-edit" type="text" value={{ userUsername }}>
-            <button class="edit btn userEditBtn">Edit</button>
+            <button class="edit-btn userEditBtn">Edit</button>
         </section>
         <section class="profile-line email-editsec">
             <input class="profile-field" id="email-edit"type="text" value={{ userEmail }}>
@@ -14,22 +14,22 @@
         <section class="profile-line city-editsec">
             <select name="city-options" id="city-edit">
                 <option value="" disabled selected>{{userCity}}</option>
-                <option value="TORONTO">TORONTO</option>
-                <option value="RICHMOND-HILL">RICHMOND HILL</option>
-                <option value="MARKHAM">MARKHAM</option>
-                <option value="SCARBOROUGH">SCARBOROUGH</option>
-                <option value="BRAMPTON">BRAMPTON</option>
-                <option value="AJAX">AJAX</option>
-                <option value="OAKVILLE">OAKVILLE</option>
-                <option value="MISSISSAUGA">MISSISSAUGA</option>
-                <option value="BURLINGTON">BURLINGTON</option>
-                <option value="MILTON">MILTON</option>
-                <option value="CALEDON">CALEDON</option>
-                <option value="HALTON HILLS">HALTON HILLS</option>
-                <option value="NEWMARKET">NEWMARKET</option>
-                <option value="OSHAWA">OSHAWA</option>
-                <option value="YORK">YORK</option>
-                <option value="VAUGHAN">VAUGHAN</option>
+                <option value="TORONTO">Toronto</option>
+                <option value="RICHMOND-HILL">Richmond Hill</option>
+                <option value="MARKHAM">Markham</option>
+                <option value="SCARBOROUGH">Scarborough</option>
+                <option value="BRAMPTON">Brampton</option>
+                <option value="AJAX">Ajax</option>
+                <option value="OAKVILLE">Oakville</option>
+                <option value="MISSISSAUGA">Mississauga</option>
+                <option value="BURLINGTON">Burlington</option>
+                <option value="MILTON">Milton</option>
+                <option value="CALEDON">Caledon</option>
+                <option value="HALTON HILLS">Halton Hills</option>
+                <option value="NEWMARKET">Newmarket</option>
+                <option value="OSHAWA">Oshawa</option>
+                <option value="YORK">York</option>
+                <option value="VAUGHAN">Vaughan</option>
             </select>
             <button class="edit-btn cityEditBtn">Edit</button>
         </section>
@@ -56,17 +56,17 @@
         <section class="profile-line gym-editsec">
             <select name="gym-options" id="gym-edit">
                 <option value="" disabled selected>{{userGym}}</option>
-                <option value="LA FITNESS">LA FITNESS</option>
-                <option value="GOODLIFE FITNESS">GOODLIFE FITNESS</option>
+                <option value="LA FITNESS">LA Fitness</option>
+                <option value="GOODLIFE FITNESS">Goodlife Fitness</option>
                 <option value="YMCA">YMCA</option>
-                <option value="ORANGETHEORY FITNESS">ORANGETHEORY FITNESS</option>
-                <option value="BODY VISION FITNESS">BODY VISION FITNESS</option>
-                <option value="UP & FIT FITNESS">UP &amp; FIT FITNESS</option>
+                <option value="ORANGETHEORY FITNESS">Orangetheory</option>
+                <option value="BODY VISION FITNESS">Body Vision</option>
+                <option value="UP & FIT FITNESS">Up &amp; Fit Fitness</option>
             </select>
             <button class="edit-btn gymEditBtn">Edit</button>
         </section>
         <section id="delete-account" type="submit">
-             <button class="button">Delete Account</button>
+             <button class="button delete-button">Delete Account</button>
         </section>
     </section>
 </div>
