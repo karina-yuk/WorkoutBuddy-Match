@@ -45,14 +45,14 @@ User.init(
     },
     gender: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
       // validate: {
       //   isIn: [['M', 'F', 'O', 'N']],
       // },
     },
     gym_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
       references: {
         model: 'gym',
         key: 'id',
@@ -60,7 +60,7 @@ User.init(
     },
     workout_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
       references: {
         model: 'workout',
         key: 'id',
@@ -68,7 +68,7 @@ User.init(
     },
     city_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
       references: {
         model: 'city',
         key: 'id',

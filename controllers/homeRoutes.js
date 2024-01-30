@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
       // Pass serialized data and session flag into template
       res.render('landingpage', {
         // projects,
-        logged_in: req.session.logged_in
+        logged_in: req.session.loggedIn
       });
     } catch (err) {
       res.status(500).json(err);
@@ -77,7 +77,7 @@ router.get('/postings', async (req,res) =>{
               console.log(postInfo)
               res.render('postings', {
                 postInfo,
-                logged_in: req.session.logged_in
+                logged_in: req.session.loggedIn
               });
               
     } catch (err) {
@@ -113,7 +113,7 @@ router.get('/profile', async (req, res) => {
     console.log(userPost)
     res.render('profile', {
       userPost,
-      logged_in: req.session.logged_in
+      logged_in: req.session.loggedIn
     });
   } catch (err) {
     res.status(500).json(err);
@@ -141,13 +141,22 @@ router.get('/profile', async (req, res) => {
       ],
       attributes: ['username', 'email', 'gender'],
     });
+    const cityData = await City.findAll({})
+    const gymData = await Gym.findAll({})
+    const workoutData = await Workout.findAll({})
+    const cities = cityData.map((city) => city.get({ plain: true }));
+    const gyms = gymData.map((gym) => gym.get({ plain: true }));
+    const workouts = workoutData.map((workout) => workout.get({ plain: true }));
     // Serialize data so the template can read it
     const userPost = userData.map((userPost) => userPost.get({ plain: true }));
     // Pass serialized data and session flag into template
     console.log(userPost)
     res.render('userinfo', {
       userPost,
-      logged_in: req.session.logged_in
+      cities,
+      gyms,
+      workouts,
+      logged_in: req.session.loggedIn
     });
   } catch (err) {
     res.status(500).json(err);

@@ -3,15 +3,15 @@ const userinfoFormHandler = async (event) => {
     event.preventDefault();
   
     const gender = document.getElementById('gender-options').value;
-    const city = document.getElementById('city-options').value;
-    const gym = document.getElementById('gym-options').value;
-    const workout = document.getElementById('workout-options').value;
+    const city_id = document.getElementById('city-options').value;
+    const gym_id = document.getElementById('gym-options').value;
+    const workout_id = document.getElementById('workout-options').value;
   
-    if (gender && city && gym && workout) {
+    if (gender && city_id && gym_id && workout_id) {
       // Send the captured values to the backend API endpoint
-      const response = await fetch('/api/user', {
-        method: 'POST',
-        body: JSON.stringify({ gender, city, gym, workout }),
+      const response = await fetch('/api/user/userinfo', {
+        method: 'PUT',
+        body: JSON.stringify({ gender, city_id, gym_id, workout_id }),
         headers: { 'Content-Type': 'application/json' },
       });
   

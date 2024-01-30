@@ -15,7 +15,7 @@ const signInFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        document.location.replace('/posting');
+        document.location.replace('/postings');
       } else {
         alert('Failed to log in');
       }
