@@ -9,7 +9,7 @@ const signupFormHandler = async (event) => {
   
     if (email && username && password) {
       // Send info to controller to process
-      const response = await fetch('/api/user/signup', {
+      const response = await fetch('/api/user', {
         method: 'POST',
         body: JSON.stringify({ username, email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -21,7 +21,7 @@ const signupFormHandler = async (event) => {
         alert(response.statusText);
       }
     }
-    console.log("errorsignup")
+    // console.log("errorsignup")
   };
 
 

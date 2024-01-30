@@ -11,6 +11,7 @@ router.post('/', async (req, res) => {
             res.status(200).json(userData);
         });
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
@@ -40,15 +41,16 @@ router.post('/signin', async (req, res) => {
 });
 
 // The `/api/user/userinfo` endpoint
-router.post('/userinfo', async (req, res) => {
+router.put('/userinfo', async (req, res) => {
     try {
-        const userData = await User.create(req.body);
-        req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.loggedIn = true;
+        const userData = await User.update(req.body,{where:{id:req.session.user_id}});
+        // req.session.save(() => {
+        //     req.session.user_id = userData.id;
+        //     req.session.loggedIn = true;
             res.status(200).json(userData);
-        });
+        // });
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
